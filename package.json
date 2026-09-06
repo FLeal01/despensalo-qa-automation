@@ -1,0 +1,15 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "Scripts de automatización para la Evaluación U3 - Testing aplicado a despensalo.cl",
+  "scripts": {
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium --repeat-each=3",
+    "test:firefox": "playwright test --project=firefox --repeat-each=3",
+    "test:all": "playwright test --repeat-each=3",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.0"
+  }
+}
