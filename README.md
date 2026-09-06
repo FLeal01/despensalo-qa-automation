@@ -10,6 +10,7 @@
   * `CP-07-16-validaciones.spec.js`: Reglas de negocio (bloqueo de stock negativo bajo 0) y validación reactiva de campos obligatorios en modales[cite: 1].
 * **`docs/`**:
   * **Documento_Casos_Prueba_Despensalo.pdf:** Registro formal de casos manuales ejecutados, gestión de defectos (bug tracking con causa raíz y recomendación), sesiones exploratorias y análisis comparativo manual.
+  * **Presentacion_Final_Ejecutiva_Despensalo.pptx:** Versión resumida y visual del informe.
 * **`playwright.config.js`**: Configuración multi-entorno (Chromium y Firefox) con captura automática de screenshots, videos y trazas[cite: 1, 2].
 * **`test-results/` / `playwright-report/`**: Evidencias gráficas, capturas automáticas y reportes consolidados en HTML[cite: 1, 2].
 
@@ -17,15 +18,17 @@
 
 ## Trazabilidad de Casos y Cumplimiento de Rúbrica
 
-| Caso Manual[cite: 1] | Script Automatizado[cite: 1] | Objetivo / Validación | Criterio Clave |
-| :---: | :--- | :--- | :---: |
-| **CP-02**[cite: 1] | `CP-02-login.spec.js` | Autenticación válida, ocultamiento de `#authGate` y carga de vista principal[cite: 1]. | Flujo autenticado[cite: 1] |
-| **CP-03**[cite: 1] | `CP-03-04-inventario.spec.js` | Registro manual de ítem e incremento en contador global `#kUnits`[cite: 1]. | Parametrización (6.1)[cite: 1] |
-| **CP-04**[cite: 1] | `CP-03-04-inventario.spec.js` | Modificación de stock (5 a 8 un.) sobre `.stock-num`[cite: 1]. | Consistencia de datos[cite: 1] |
-| **CP-07**[cite: 1] | `CP-07-16-validaciones.spec.js` | Control de límites: bloqueo de decremento bajo 0 y estado agotado[cite: 1]. | Caso negativo / borde[cite: 1] |
-| **CP-16**[cite: 1] | `CP-07-16-validaciones.spec.js` | Restricción de guardado sin nombre y captura de alerta `#toast.bad`[cite: 1]. | Manejo de excepciones[cite: 1] |
+### 🔗 Matriz de Trazabilidad de Casos y Cumplimiento
 
-* **Consistencia Multi-Entorno (6.2):** Suites ejecutadas en **Chromium** y **Firefox** mediante 3 ciclos repetitivos continuos, alcanzando un **100% de consistencia** (superando el umbral del 90% exigido)[cite: 1].
+| Caso Manual | Script Automatizado | Objetivo / Validación Técnica | Criterio de Evaluación |
+| :---: | :--- | :--- | :---: |
+| **CP-02** | `CP-02-login.spec.js` | Autenticación válida, ocultamiento de `#authGate` y renderizado de la vista principal. | Flujo con usuario autenticado (5.1)[cite: 1] |
+| **CP-03** | `CP-03-04-inventario.spec.js` | Alta manual de producto con stock inicial y actualización del indicador global `#kUnits`. | Automatización parametrizada (6.1)[cite: 1] |
+| **CP-04** | `CP-03-04-inventario.spec.js` | Aumento de stock de 5 a 8 unidades y verificación del selector reactivo `.stock-num`. | Consistencia de datos y regresión (6.2)[cite: 1, 2] |
+| **CP-07** | `CP-07-16-validaciones.spec.js` | Control de límites: bloqueo de decremento bajo 0 y asignación del estado agotado. | Caso de prueba negativo / de borde (5.1)[cite: 1] |
+| **CP-16** | `CP-07-16-validaciones.spec.js` | Restricción de guardado sin nombre obligatorio y captura de la notificación `#toast.bad`. | Validación de formulario y excepciones (5.1)[cite: 1] |
+
+* **Consistencia Multi-Entorno (6.2):** Suites ejecutadas en **Chromium** y **Firefox** mediante 3 ciclos repetitivos continuos, alcanzando un **100% de consistencia** (superando el umbral del 90% exigido).
 * **Políticas Operacionales:** Ejecución restringida a un solo worker (`--workers=1`) para asegurar tráfico de usuario real, evitando condiciones de carrera en el almacenamiento o sobrecarga en el servidor evaluado.
 
 ---
