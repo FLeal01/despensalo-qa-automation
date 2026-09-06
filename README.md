@@ -10,7 +10,7 @@
   * `CP-07-16-validaciones.spec.js`: Reglas de negocio (bloqueo de stock negativo bajo 0) y validación reactiva de campos obligatorios en modales[cite: 1].
 * **`docs/`**:
   * **Documento_Casos_Prueba_Despensalo.pdf:** Registro formal de casos manuales ejecutados, gestión de defectos (bug tracking con causa raíz y recomendación), sesiones exploratorias y análisis comparativo manual.
-  * **Presentacion_Final_Ejecutiva_Despensalo.pptx:** Versión resumida y visual del informe.
+  * **Presentacion_Final_Despensalo.pdf:** Versión resumida y visual del informe.
 * **`playwright.config.js`**: Configuración multi-entorno (Chromium y Firefox) con captura automática de screenshots, videos y trazas[cite: 1, 2].
 * **`test-results/` / `playwright-report/`**: Evidencias gráficas, capturas automáticas y reportes consolidados en HTML[cite: 1, 2].
 
