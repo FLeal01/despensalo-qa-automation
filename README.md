@@ -30,13 +30,6 @@
 
 ---
 
-## Antes de ejecutar
-
-Los selectores (`getByLabel`, `getByRole`, `getByTestId`, rutas como `/login` o `/inventario`) son **aproximaciones basadas en tus casos documentados**. Debes:
-
-1. Abrir despensalo.cl e inspeccionar el HTML real (clic derecho → Inspeccionar) de cada campo/botón mencionado.
-2. Reemplazar los selectores marcados por los reales.
-
 ## 1. Instalación
 
 ```bash
